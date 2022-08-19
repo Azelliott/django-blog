@@ -21,7 +21,7 @@ class CommentAdmin(admin.ModelAdmin):
     actions = ['approve_comments']
 
 
-    def approve_comments(self, request, queryset):
+    def approve_comments(self, request, queryset): # pylint: disable=unused-argument
         queryset.update(approved=True)
 
 
